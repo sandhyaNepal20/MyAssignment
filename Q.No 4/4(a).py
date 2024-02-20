@@ -53,6 +53,7 @@ def min_steps_to_collect_all_keys(maze):
     queue.append((start_x, start_y, 0, 0))  # (x, y, keys, steps)
 
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
     while queue:
         x, y, keys, steps = queue.popleft()
 
@@ -84,4 +85,4 @@ maze = [
     "bPAPB"
 ]
 result = min_steps_to_collect_all_keys(maze)
-print("The Minimum number of moves :", result)  # Output: 8
+print("The Minimum number of moves :", result)
