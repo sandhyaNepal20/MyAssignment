@@ -32,11 +32,11 @@ Here the breakdown:
 
 8) Pause, Resume, and Cancel
 
-      Pause (`Pause` Button):** Pauses the ongoing download process. No new downloads can be initiated while paused.
+      Pause (pause Button):Pauses the ongoing download process. No new downloads can be initiated while paused.
 
-      Resume (`Resume` Button):** Resumes the download process after a pause.
+      Resume (Resume Button): Resumes the download process after a pause.
 
-      Cancel (`Cancel` Button):** Cancels ongoing downloads and allows for a fresh start. This action terminates all existing threads and creates a new thread pool.
+      Cancel (Cancel Button): Cancels ongoing downloads and allows for a fresh start. This action terminates all existing threads and creates a new thread pool.
 
 7) main method:.
       This is the main function for running the application. Here we created the main
