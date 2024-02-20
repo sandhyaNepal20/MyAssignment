@@ -1,4 +1,7 @@
-# Class to represent a graph edge
+
+# (b).
+# Implement Kruskal algorithm and priority queue using minimum heap
+
 class Edge:
     def __init__(self, src, dest, weight):
         self.src = src

@@ -30,7 +30,7 @@ def Sandhya_Recommendation(user_id, n_recommendations=5):
     print(f"Combined Interests for user {user_id}: {combined_interests}")
 
     candidate_scores = defaultdict(float)
-    
+
     for content_id, content_info in content.items():
         content_tags = set(content_info["tags"])
         common_tags = combined_interests.intersection(content_tags)

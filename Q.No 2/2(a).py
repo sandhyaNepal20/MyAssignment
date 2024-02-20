@@ -6,26 +6,24 @@
 
 
 
-def min_moves_to_equalize(sewing_machines):
-    total_dresses = sum(sewing_machines)
-    machines_count = len(sewing_machines)
-
-    # Calculate the target number of dresses for each machine
-    if total_dresses % machines_count != 0:
+def calculate_min_moves(machines):
+    total_dresses = sum(machines)
+    n = len(machines)
+    if total_dresses % n != 0:
         return -1
-    target_dresses = total_dresses // machines_count
+    average = total_dresses // n
     moves = 0
-
-    # Iterate until all machines have the target dress count
-    for dresses in sewing_machines:
-        # Calculate the difference between current dresses and the target
-        diff = dresses - target_dresses
-        # Accumulate moves needed to equalize dresses
-        if diff > 0:
-            moves += diff
-
+    balance = 0
+    for dresses in machines:
+        diff = dresses - average
+        balance += diff
+        moves += abs(balance)
     return moves
 
-# Example usage:
-sewing_machines = [1, 0, 5]
-print(min_moves_to_equalize(sewing_machines))  # Output: 2
+if __name__ == "__main__":
+    input_line = input("Enter the number of dresses in each sewing machine separated by commas (e.g., 2, 1, 3, 0, 2):")
+    machines = [int(x.strip()) for x in input_line.split(',')]
+    result = calculate_min_moves(machines)
+    print("Minimum number of moves required:", result)
+
+
